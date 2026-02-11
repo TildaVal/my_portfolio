@@ -1,0 +1,393 @@
+
+/* ========== GENERAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========== NAVBAR ========== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.ci {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00aaff;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.ci span {
+  color: white;
+}
+
+/* Logo glow and animation */
+.ci:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #00aaff, 0 0 40px #0066ff;
+    transform: scale(1.1);
+}
+
+/* Navbar links */
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#nav-links a {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+#nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #00aaff;
+    transition: 0.4s;
+}
+
+#nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+.ay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10% 7%;
+  background: linear-gradient(135deg, #000, #020a1a);
+}
+
+.con {
+  flex: 1;
+  min-width: 280px;
+}
+
+.ay h1 {
+  font-size: 3rem;
+  color: #00aaff;
+  text-shadow: 0 0 15px rgba(0, 128, 255, 0.7);
+}
+
+.ay h3 {
+  color: #aabfff;
+  margin: 10px 0;
+}
+
+.ay h4 {
+  margin-bottom: 10px;
+}
+
+.button {
+    display:inline-block;
+  background: #0066ff;
+  color: white;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #00aaff;
+  box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+}
+
+/* Profile image */
+.lac {
+  text-align: center;
+  flex: 1;
+  min-width: 280px;
+}
+
+.ac {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid #00aaff;
+  box-shadow: 0 0 50px #00aaff;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px);}
+}
+
+/* ========== ABOUT SECTION ========== */
+#di {
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 20px;
+  padding: 5%;
+  margin: 5% auto;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(0, 0, 255, 0.2);
+}
+
+#di h2 {
+  color: #00aaff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pp {
+  float: right;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00aaff;
+  margin-left: 20px;
+}
+
+#di ul {
+  list-style: square;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+#di li {
+  color: #b5c8ff;
+}
+
+/* ========== SKILLS ========== */
+#sk {
+  width: 90%;
+  margin: 5% auto;
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 20px;
+  padding: 5%;
+  box-shadow: 0 0 30px rgba(0, 0, 255, 0.3);
+}
+
+#sk h2 {
+  text-align: center;
+  color: #00aaff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.gl {
+  background: linear-gradient(180deg, #111, #1a1a1a);
+  border-radius: 20px;
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #00aaff;
+  transition: 0.4s ease;
+  animation: fadeUp 1s ease-in;
+  
+}
+.gl:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00aaff;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.gl img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ========== PROJECTS SECTION ========== */
+#pr {
+  width: 90%;
+  margin: 5% auto;
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 20px;
+  padding: 5%;
+  box-shadow: 0 0 40px rgba(0, 0, 255, 0.3);
+}
+
+#pr h2 {
+  text-align: center;
+  color: #00aaff;
+  margin-bottom: 30px;
+}
+
+.pjt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.jt {
+  background: linear-gradient(180deg, #141414, #1f1f1f);
+  border-radius: 15px;
+  width: 230px;
+  border: 1px solid #00aaff;
+  box-shadow: 0 0 20px rgba(0, 128, 255, 0.2);
+  overflow: hidden;
+  transition: 0.4s ease;
+  transform: scale(1);
+  animation: fadeUp 1s ease-in;
+}
+
+.jt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00aaff;
+}
+
+.jt img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.es {
+  padding: 15px;
+  text-align: center;
+  color: #b5c8ff;
+}
+
+/* ========== FOOTER ========== */
+#ft {
+  text-align: center;
+  padding: 40px 10px;
+  background: rgba(10, 10, 10, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 90%;
+  margin: 5% auto;
+}
+
+#ft h2 {
+  color: #00aaff;
+}
+
+#ft p {
+  margin: 10px 0;
+}
+
+#ic {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.li i {
+  font-size: 1.6rem;
+  transition: 0.4s;
+}
+
+.li i:hover {
+  transform: scale(1.3);
+  text-shadow: 0 0 20px #00aaff;
+}
+#wh a {
+  background: rgb(82, 248, 82);
+}
+#fb a {
+  background: #fff;
+  color: blue;
+}
+#lk a {
+  background: #0a3d62;
+}
+#in a {
+  background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+#x a {
+  background: royalblue;
+}
+.li a {
+  border-radius: 50%;
+  padding: 25%;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .ay {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ac {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  #di, #sk, #pr {
+    padding: 8%;
+  }
+
+  .container, .pjt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gl, .jt {
+    width: 90%;
+  }
+
+  #ft {
+    width: 95%;
+  }
+}
